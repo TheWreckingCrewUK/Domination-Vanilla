@@ -45,38 +45,6 @@ call twc_fnc_playerListAction;
 player enableFatigue false;
 player setCustomAimCoef 0.4;
 
-player setUnitLoadout defaultLoadout;
-
-player addAction ["<t color='#FF0000'>Mission Status</t>",{
-	call InsP_fnc_MissionStatus;
-}];
-
-player addAction ["<t color='#0000ff'>Question Civillian</t>",{
-	_civ = nearestObject [(getPos player), "C_man_1"];
-	_civ call InsP_fnc_questionDisplay
-},nil,1.5,true,true,"","(nearestObject [(getPos player), 'C_man_1']) distance2D (getPos player) < 4",15,false];
-
-
-
-player addAction ["<t color='#FFFF00'>Disarm IED</t>",{
-	_ied = nearestObject [(getPos player), "MineBase"];
-	_trigger = _ied getVariable ["InsP_trigger", objNull];
-	deleteVehicle _trigger;
-	deleteVehicle _ied;
-	InsP_iedDestroyed = InsP_iedDestroyed + 1;
-	InsP_civTrust = InsP_civTrust + 0.1;
-	publicVariable "InsP_iedDestroyed";
-	publicVariable "InsP_civTrust";
-	_rand = (random 5);
-	if(_rand < 1)then{
-		[player] remoteExecCall ["TWC_fnc_iedAttack",2];
-	};
-	_markerstr = createMarker [str random 10000, player];
-	_markerstr setMarkerShape "ICON";
-	_markerstr setMarkerType "mil_triangle";
-	_markerstr setMarkerColor "ColorYellow";
-	_markerstr setMarkerText "IED Defused";
-	
-	hint "IED Disarmed";
-	
-},nil,1.5,true,true,"","(nearestObject [(getPos player), 'MineBase']) distance2D (getPos player) < 3",15,false];
+if(!isNil "defaultLoadout")then{
+	player setUnitLoadout defaultLoadout;
+};
