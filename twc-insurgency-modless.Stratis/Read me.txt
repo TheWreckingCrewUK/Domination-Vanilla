@@ -1,0 +1,3 @@
+Hi,
+
+When adding mods and stuff update the clients arsenal and restrictions in the client folder and then the extra towns in the server folder.
