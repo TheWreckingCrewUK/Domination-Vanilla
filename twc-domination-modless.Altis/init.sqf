@@ -32,10 +32,6 @@ if(isServer)then{
 //setting for arsenal or TWC ammobox
 useArsenal = 1;
 whatMap = "Altis";
-//Setting for how many AO's to complete:
-aosToComplete = 3;
-// Setting for how far AO's should spawn Away
-aoDistanceFromSpawn = 4000;
 
 //End of map/mod settings
 

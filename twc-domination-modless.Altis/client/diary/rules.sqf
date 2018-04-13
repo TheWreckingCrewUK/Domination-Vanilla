@@ -1,0 +1,1 @@
+player createDiaryRecord ["Rules",["Rules","Work With your Squad\n Don't be a problem."]];

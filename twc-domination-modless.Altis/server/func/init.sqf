@@ -9,3 +9,5 @@ twc_fnc_lowPlayers = compile preprocessfilelinenumbers "server\func\fnc_lowPlaye
 twc_fnc_highPlayers = compile preprocessfilelinenumbers "server\func\fnc_highPlayers.sqf";
 
 twc_fnc_globalChat = compile preProcessFileLineNumbers "server\func\fnc_GlobalChat.sqf";
+
+twc_fnc_deleteDead = compile preProcessFileLineNumbers "server\func\fnc_deleteDead.sqf";

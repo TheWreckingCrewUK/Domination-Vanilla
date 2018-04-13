@@ -1,5 +1,8 @@
-while {true} do{
-	_deadbodies = nearestObjects [getMarkerPos "respawn_west", ["man"], 300];
-	{if (not alive _x) then {deleteVehicle _x};} forEach _deadbodies;
-	sleep 5;
-};
+_handle = addMissionEventHandler ["HandleDisconnect",{
+	params["_unit","_id","_uid","_name"];
+	if(_unit distance2D (getMarkerPos "base") < 200) then{
+		deleteVehicle _unit;
+	}else{
+		[_unit] spawn twc_fnc_deleteDead;
+	};
+}];

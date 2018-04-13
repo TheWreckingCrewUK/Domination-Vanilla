@@ -5,3 +5,5 @@ player createDiarySubject ["Domination","Domination"];
 player createDiarySubject ["TWC","The Wrecking Crew"];
 #include "teamspeak.sqf";
 #include "website.sqf";
+player createDiarySubject ["Rules","Rules"];
+#include "rules.sqf";

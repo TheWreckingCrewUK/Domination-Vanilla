@@ -8,7 +8,7 @@ player addEventHandler ["GetInMan",{
 player addEventHandler ["GetInMan",{
 	params["_unit","_role","_vehicle","_turret"];
 	
-	if(typeOf _vehicle == "I_Heli_light_03_dynamicLoadout_F")then{
+	if(typeOf _vehicle == "I_Heli_light_03_unarmed_F")then{
 		if(_role in ["cargo","gunner"] || player == helo1)exitWith{};
 		hint "You cannot Fly this Helicopter";
 		moveOut player;
