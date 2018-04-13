@@ -4,7 +4,6 @@
 
 if (!isNil "armour1" && {player == armour1}) then {
 	execVM "client\arsenal\armour_co.sqf";
-	execVM "client\spawning\armour.sqf";	
 	{armour1 customChat [joinCustomChat, format["%1 has joined as Armour Commander", name armour1]];} remoteExec ["bis_fnc_call", armour1, false];
 };
 if (!isNil "armour2" && {player == armour2}) then {
@@ -18,20 +17,16 @@ if (!isNil "armour3" && {player == armour3}) then {
 
 if (!isNil "helo1" && {player == helo1}) then {
 	execVM "client\arsenal\helo.sqf";
-	execVM "client\spawning\heli.sqf";
 };
 if (!isNil "helo2" && {player == helo2}) then {
 	execVM "client\arsenal\helo.sqf";
-	execVM "client\spawning\heli.sqf";
 };
 if (!isNil "helo3" && {player == helo3}) then {
 	execVM "client\arsenal\helo.sqf";
-	execVM "client\spawning\heli.sqf";
 };
 
 if (!isNil "jet1" && {player == jet1}) then {
 	execVM "client\arsenal\jet.sqf";
-	execVM "client\spawning\jet.sqf";
 };
 if (!isNil "p1" && {player == p1}) then {
 	execVM "client\arsenal\alpha_sl.sqf";

@@ -50,13 +50,15 @@ if isServer then {
 };
 
 if isServer then {
-	_spawnPos = [_pos,[200,300],[10,110],0,[1,100]] call SHK_pos;
+	_spawnPos = [_pos,[150,350],[10,110],0,[1,100]] call SHK_pos;
 	bunker1 = "land_BagBunker_Large_F" createVehicle _spawnPos;
 	_dir = [_spawnPos, _pos] call BIS_fnc_dirTo;
 	bunker1 setDir _dir;
 	
+	sleep 1;
+	
 	_unit = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
-	[_unit, _spawnPos, 50] call twc_fnc_defend;
+	[_unit, _spawnPos, 20] call twc_fnc_defend;
 	
 	_markerstr = createMarker ["aobunkerone",_spawnPos];
 	_markerstr setMarkerShape "ICON";
@@ -73,13 +75,15 @@ if isServer then {
 };
 
 if isServer then {
-	_spawnPos = [_pos,[200,300],[130,230],0,[1,100]] call SHK_pos;
+	_spawnPos = [_pos,[150,250],[130,230],0,[1,100]] call SHK_pos;
 	bunker2 = "land_BagBunker_Large_F" createVehicle _spawnPos;
 	_dir = [_spawnPos, _pos] call BIS_fnc_dirTo;
 	bunker2 setDir _dir;
 	
+	sleep 1;
+	
 	_unit = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
-	[_unit, _spawnPos, 50] call twc_fnc_defend;
+	[_unit, _spawnPos, 20] call twc_fnc_defend;
 		
 	_markerstr = createMarker ["aobunkertwo",_spawnPos];
 	_markerstr setMarkerShape "ICON";

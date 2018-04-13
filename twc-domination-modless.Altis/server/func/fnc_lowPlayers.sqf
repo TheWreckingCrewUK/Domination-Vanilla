@@ -8,7 +8,7 @@ towerCount = 1;
 bunkerCount = bunkerCount + 1;
 lowPlayerCount  = 1;
 
-for "_i" from 1 to 3 do {
+for "_i" from 1 to 2 do {
 	if isServer then {
 		_spawnPos = [_pos,[100,200],random 360,0] call SHK_pos;
 		_unit = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
@@ -22,7 +22,7 @@ for "_i" from 1 to 3 do {
 		[_unit, _spawnPos, 150] call twc_fnc_defend;
 	};
 };
-for "_i" from 1 to 1 do {
+for "_i" from 1 to 3 do {
 	if isServer then {
 		_spawnPos = [_pos,[100,300],random 360,0] call SHK_pos;
 		_unit = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;

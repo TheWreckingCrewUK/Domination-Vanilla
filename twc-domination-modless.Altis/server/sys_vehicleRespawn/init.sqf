@@ -1,0 +1,1 @@
+twc_fnc_vehicleRespawn = compile preProcessFileLineNumbers "server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf";

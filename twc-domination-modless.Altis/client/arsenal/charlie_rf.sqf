@@ -1,5 +1,5 @@
-[arsenalAmmoBox,["arifle_MX_GL_F","hgun_ACPC2_F","launch_NLAW_F","launch_B_Titan_short_F"],false] call BIS_fnc_addVirtualWeaponCargo;
-[arsenalAmmoBox,["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer","9Rnd_45ACP_Mag","NLAW_F","Titan_AT","Titan_AP"],false] call BIS_fnc_addVirtualMagazineCargo;
+[arsenalAmmoBox,["arifle_MX_GL_F","hgun_ACPC2_F","launch_B_Titan_short_F","launch_MRAWS_green_F"],false] call BIS_fnc_addVirtualWeaponCargo;
+[arsenalAmmoBox,["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer","9Rnd_45ACP_Mag","Titan_AT","Titan_AP","MRAWS_HEAT_F","MRAWS_HE_F"],false] call BIS_fnc_addVirtualMagazineCargo;
 [arsenalAmmoBox,["H_HelmetB_snakeskin","U_B_CombatUniform_mcam_vest","V_PlateCarrier1_rgr","acc_pointer_IR","optic_Hamr"],false] call Bis_fnc_addVirtualItemCargo;
 [arsenalAmmoBox,["B_AssaultPack_rgr"],false] call Bis_fnc_addVirtualBackpackCargo;
 

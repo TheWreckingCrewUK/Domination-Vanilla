@@ -4,7 +4,7 @@
 * individual player gear is added in the \client\player\init.sqf
 */
 
-arsenalAmmoBox = "B_supplyCrate_F" createVehicle (getMarkerPos "arsenal");
+arsenalAmmoBox = "IG_supplyCrate_F" createVehicle (getMarkerPos "arsenal");
 
 clearWeaponCargoGlobal arsenalAmmoBox;
 clearMagazineCargoGlobal arsenalAmmoBox;
