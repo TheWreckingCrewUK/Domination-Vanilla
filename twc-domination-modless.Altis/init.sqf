@@ -36,9 +36,9 @@ if ((str player) in _specialSlots)then{
 			case "helo1": {5};
 			case "helo2": {5};
 			case "helo3": {5};
-			case "armour1": {20};
-			case "armour2": {20};
-			case "armour3": {20};
+			case "armour1": {10};
+			case "armour2": {10};
+			case "armour3": {10};
 			case "jet1": {30};
 			default {hint "Please send a message to [TWC] Adam|aremeczk saying the FIRST init.sqf switch statement defaulted and what slot you are in."};
 		};
