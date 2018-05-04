@@ -25,7 +25,7 @@ for "_i" from 1 to 3 do {player addItemToVest "30Rnd_65x39_caseless_mag";};
 player addBackpack "B_Kitbag_mcamo";
 player addItemToBackpack "Medikit";
 for "_i" from 1 to 3 do {player addItemToBackpack "SmokeShell";};
-for "_i" from 1 to 10 do {player addItemToBackpack} "FirstAidKit";};
+for "_i" from 1 to 10 do {player addItemToBackpack "FirstAidKit";};
 player addHeadgear "H_HelmetSpecB_paint2";
 
 comment "Add weapons";
