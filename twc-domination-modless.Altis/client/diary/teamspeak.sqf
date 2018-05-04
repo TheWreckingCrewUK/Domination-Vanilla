@@ -1,1 +1,0 @@
-player createDiaryRecord ["TWC",["Teamspeak","Join us on our Teamspeak. twcrew.eu"]];

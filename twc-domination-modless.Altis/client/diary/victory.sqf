@@ -1,1 +1,0 @@
-player createDiaryRecord ["Domination",["How to Win","To win simply capture the enemy AO's by capturing the bunkers."]];

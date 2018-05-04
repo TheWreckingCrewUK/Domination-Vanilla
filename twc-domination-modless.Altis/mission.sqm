@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=216;
+		nextID=230;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={15196.931,37.006809,17329.203};
-		dir[]={-0.70500445,-0.21220642,-0.67685282};
-		up[]={-0.15312669,0.97720289,-0.14701281};
-		aside[]={-0.69262159,-5.0407834e-007,0.72142565};
+		pos[]={15219.654,141.2701,17341.508};
+		dir[]={-0.58750695,-0.80118901,-0.11481985};
+		up[]={-0.78628373,0.59840661,-0.15366942};
+		aside[]={-0.19184735,-6.5321656e-006,0.98158169};
 	};
 };
 binarizationWanted=0;
@@ -684,8 +684,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15141.335,17.788052,17333.738};
-						angles[]={0,0.65292364,0};
+						position[]={15141.335,17.788054,17333.738};
+						angles[]={0,0.65292764,0};
 					};
 					side="West";
 					flags=7;
@@ -693,10 +693,12 @@ class Mission
 					{
 						name="p1";
 						description="Alpha Section Commander";
+						isPlayer=1;
 						isPlayable=1;
 					};
 					id=21;
 					type="B_Soldier_SL_F";
+					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1173,6 +1175,7 @@ class Mission
 			{
 			};
 			id=20;
+			atlOffset=1.9073486e-006;
 		};
 		class Item7
 		{
@@ -1683,7 +1686,6 @@ class Mission
 					{
 						name="p16";
 						description="Bravo Marksman";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=56;
@@ -1749,8 +1751,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15149.644,17.861092,17324.6};
-						angles[]={0,0.20693496,0};
+						position[]={15149.644,17.86109,17324.6};
+						angles[]={0,0.20692623,0};
 					};
 					side="West";
 					flags=7;
@@ -1762,6 +1764,7 @@ class Mission
 					};
 					id=58;
 					type="B_Soldier_SL_F";
+					atlOffset=-1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2298,7 +2301,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={15144.029,17.763258,17345.754};
+						position[]={15147.724,17.845449,17327.938};
 						angles[]={0,2.2683573,0};
 					};
 					side="West";
@@ -2542,6 +2545,7 @@ class Mission
 			{
 			};
 			id=57;
+			atlOffset=-1.9073486e-006;
 		};
 		class Item9
 		{
@@ -4724,7 +4728,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15169.021,17.905363,17362.738};
-				angles[]={-0,3.9516799,0.0012918708};
+				angles[]={0,3.9516799,0.0012918708};
 			};
 			side="Empty";
 			flags=4;
@@ -4819,16 +4823,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15185.431,21.04644,17357.607};
-				angles[]={0,3.9516799,0};
+				position[]={15185.431,17.913477,17357.607};
+				angles[]={6.2818937,3.9516799,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
 			id=213;
 			type="Land_ClutterCutter_large_F";
-			atlOffset=3.1329632;
 		};
 		class Item107
 		{

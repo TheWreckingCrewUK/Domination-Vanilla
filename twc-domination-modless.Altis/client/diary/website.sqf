@@ -1,1 +1,0 @@
-player createDiaryRecord ["TWC",["Website","Visit our website at http://www.thewreckingcrew.eu/"]];

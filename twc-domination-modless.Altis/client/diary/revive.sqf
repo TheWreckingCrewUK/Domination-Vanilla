@@ -1,1 +1,0 @@
-player createDiaryRecord ["Domination",["Revive Settings","Revive Settings\n 5 Minute Bleedout\n 30 Second Revive\n Medic bonus X3\n First Aide Kit or Medic Bag to revive"]];
