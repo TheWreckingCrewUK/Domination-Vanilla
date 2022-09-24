@@ -61,7 +61,7 @@ _trg = createTrigger ["EmptyDetector", _spawnPos];
 _trg setTriggerArea [10,10,_dir,True];
 _trg setTriggerTimeout [5,5,5,True];
 _trg setTriggerActivation ["WEST", "Present", False];
-_trg setTriggerStatements ["this","'Bunker A Captured' remoteExec ['hint']; aoBunkerOne = true; 'aobunkerone' setMarkerColor 'colorWEST'; ['Bunker_A'] call bis_fnc_deleteTask",""];
+_trg setTriggerStatements ["this","'Bunker A Captured' remoteExec ['hint']; aoBunkerOne = true; 'aobunkerone' setMarkerColor 'colorWEST'; ['Bunker_A','Succeeded'] call bis_fnc_taskSetState",""];
 [West,["Bunker_A"],["Capture bunker A","Bunker A",""],(getMarkerPos  _markerstr),false,1,false,"A",False] call BIS_fnc_taskCreate;
 twc_aoBoolArray pushback aoBunkerOne;
 
@@ -87,7 +87,7 @@ _trg = createTrigger ["EmptyDetector", _spawnPos];
 _trg setTriggerArea [10,10,_dir,True];
 _trg setTriggerTimeout [5,5,5,True];
 _trg setTriggerActivation ["WEST", "Present", False];
-_trg setTriggerStatements ["this","'Bunker B Captured' remoteExec ['hint']; aoBunkerTwo = true; 'aobunkertwo' setMarkerColor 'colorWEST'; ['Bunker_B'] call bis_fnc_deleteTask",""];
+_trg setTriggerStatements ["this","'Bunker B Captured' remoteExec ['hint']; aoBunkerTwo = true; 'aobunkertwo' setMarkerColor 'colorWEST'; ['Bunker_B','Succeeded'] call bis_fnc_taskSetState",""];
 [West,["Bunker_B"],["Capture bunker B","Bunker B",""],(getMarkerPos  _markerstr),false,1,false,"B",False] call BIS_fnc_taskCreate;
 twc_aoBoolArray pushback aobunkerTwo;
 
@@ -110,15 +110,22 @@ _dir = [_spawnPos, getMarkerPos "respawn_west"] call BIS_fnc_dirTo;
 _unit = [_spawnPos, EAST, spg] call BIS_fnc_spawnGroup;
 (vehicle (leader _unit)) setFuel 0;
 (vehicle (leader _unit)) setDir _dir;
-(vehicle (leader _unit)) addEventHandler ["Killed",{[]spawn{sleep 1; artilleryOBJ = true; ["SPGOBJ"] call bis_fnc_deleteTask}}];
+(vehicle (leader _unit)) addEventHandler ["Killed",{[]spawn{sleep 1; artilleryOBJ = true; ["SPGOBJ","SUCCEEDED"] call BIS_fnc_taskSetState}}];
 ["comp_artilleryBaseSmall", ((getDir (vehicle (leader _unit))) - 90), _spawnPos] execVM "server\sys_compositions\createComposition.sqf";
 twc_aoBoolArray pushback artilleryOBJ;
 
 [West,["SPGOBJ"],["Destroy the enemy Artillery","Destroy Artillery Site"],_spawnPos,false,1,false,"destroy",False] call BIS_fnc_taskCreate;
 
-waitUntil{!(false in twc_aoBoolArray)};
+waitUntil{twc_aoBoolArray = [aoBunkerOne, aoBunkerTwo, aoBunkerThree, artilleryOBJ, radioTowerObj]; !(false in twc_aoBoolArray)};
 
+//updates Tasks
 [_name, "Succeeded",true] spawn BIS_fnc_taskSetState;
+["SPGOBJ"] call bis_fnc_deleteTask;
+["Bunker_A"] call bis_fnc_deleteTask;
+["Bunker_B"] call bis_fnc_deleteTask;
+["Bunker_C"] call bis_fnc_deleteTask;
+["radioTowerObj"] call bis_fnc_deleteTask;
+
 hint "AO captured";
 deleteMarker "aobunkerone";
 deleteMarker "aobunkertwo";

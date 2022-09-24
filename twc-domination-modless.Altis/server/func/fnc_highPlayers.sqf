@@ -21,7 +21,7 @@ _trg = createTrigger ["EmptyDetector", _spawnPos];
 _trg setTriggerArea [10,10,_dir,True];
 _trg setTriggerTimeout [5,5,5,True];
 _trg setTriggerActivation ["WEST", "Present", False];
-_trg setTriggerStatements ["this","'Bunker C Captured' remoteExec ['hint']; aoBunkerThree = true; 'aobunkerthree' setMarkerColor 'colorWEST'; ['Bunker_C'] call bis_fnc_deleteTask",""];
+_trg setTriggerStatements ["this","'Bunker C Captured' remoteExec ['hint']; aoBunkerThree = true; 'aobunkerthree' setMarkerColor 'colorWEST'; ['Bunker_C','Succeeded'] call bis_fnc_taskSetState",""];
 [West,["Bunker_C"],["Capture bunker C","Bunker C",""],(getMarkerPos  _markerstr),false,1,false,"C",False] call BIS_fnc_taskCreate;
 twc_aoBoolArray pushback aoBunkerThree;
 
@@ -29,7 +29,7 @@ radioTowerObj = false;
 _spawnPos = [_pos,[100,300],random 360,0,[1,100]] call SHK_pos;
 _tower = radioTower createVehicle _spawnPos;
 _tower setDamage 0.99;
-_tower addEventHandler ["Killed",{"Radio Tower Destroyed. The enemies can no longer call in Reinforcements" remoteExec ["hint"]; "radioMarker" setMarkerColor "colorWEST"; radioTowerObj = true; []spawn{sleep 5; ["radioTowerObj"] call bis_fnc_deleteTask}}];
+_tower addEventHandler ["Killed",{"Radio Tower Destroyed. The enemies can no longer call in Reinforcements" remoteExec ["hint"]; "radioMarker" setMarkerColor "colorWEST"; radioTowerObj = true; []spawn{sleep 5; ["radioTowerObj",'Succeeded'] call bis_fnc_taskSetState}}];
 twc_aoBoolArray pushback radioTowerObj;
 
 _spawnPos = [(_spawnPos select 0) + 5,(_spawnPos select 1), (_spawnPos select 2)];

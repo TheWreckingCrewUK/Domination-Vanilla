@@ -4,6 +4,10 @@ towerCount = 1;
 bunkerCount = bunkerCount + 1;
 lowPlayerCount  = 1;
 
+//sets extra objectives as true since they do not exist in low players
+radioTowerObj = true;
+aoBunkerThree = true;
+
 for "_i" from 1 to 2 do {
 	_spawnPos = [_pos,[100,200],random 360,0] call SHK_pos;
 	_unit = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
